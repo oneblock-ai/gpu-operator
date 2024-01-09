@@ -24,6 +24,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/scheme"
 )
 
+var SchemeGroupVersion = GroupVersion
+
 var (
 	// GroupVersion is group version used to register these objects
 	GroupVersion = schema.GroupVersion{Group: "nvidia.com", Version: "v1alpha1"}
