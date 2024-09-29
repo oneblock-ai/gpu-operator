@@ -1686,6 +1686,7 @@ type ClusterPolicyStatus struct {
 // +kubebuilder:resource:scope=Cluster
 // +kubebuilder:printcolumn:name="Status",type=string,JSONPath=`.status.state`,priority=0
 // +kubebuilder:printcolumn:name="Age",type=string,JSONPath=`.metadata.creationTimestamp`,priority=0
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // ClusterPolicy is the Schema for the clusterpolicies API
 type ClusterPolicy struct {
@@ -1697,6 +1698,7 @@ type ClusterPolicy struct {
 }
 
 // +kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // ClusterPolicyList contains a list of ClusterPolicy
 type ClusterPolicyList struct {

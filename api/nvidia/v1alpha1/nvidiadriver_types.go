@@ -469,6 +469,7 @@ type NVIDIADriverStatus struct {
 //+kubebuilder:resource:scope=Cluster,shortName={"nvd","nvdriver","nvdrivers"}
 //+kubebuilder:printcolumn:name="Status",type=string,JSONPath=`.status.state`,priority=0
 //+kubebuilder:printcolumn:name="Age",type=string,JSONPath=`.metadata.creationTimestamp`,priority=0
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // NVIDIADriver is the Schema for the nvidiadrivers API
 type NVIDIADriver struct {
@@ -480,6 +481,7 @@ type NVIDIADriver struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // NVIDIADriverList contains a list of NVIDIADriver
 type NVIDIADriverList struct {
